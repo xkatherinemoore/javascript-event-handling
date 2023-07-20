@@ -1,0 +1,92 @@
+<!-- 
+    NAME: Katherine Moore
+    MEID: KAT2341012
+    DATE: 7/19/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lesson 9 Project</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="text-center box">
+        <h1>Lesson 9 Project</h1>
+        <h2>Katherine Moore</h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="box">
+                <h2 class="text-center">JavaScript Event Types</h2>
+                <ol>
+                    <li>Load</li>
+                    <li>Scroll</li>
+                    <li>Click</li>
+                    <li>Dblclick</li>
+                    <li>Mouseover</li>
+                    <li>Mouseleave</li>
+                    <li>Input</li>
+                    <li>Change</li>
+                    <li>Submit</li>
+                </ol>
+            </div>
+            <hr>
+            <div class="main-event text-center show" id="picture-div">
+                <h2>Playing with Pictures!</h2>
+                <p>This picture was added to the webpage using the JavaScript Load event.</p>
+                <div id="onLoad-Picture"></div>
+
+                <div id="caption-box" class="hide"></div>
+                <button id="hidden-btn" class="hide"><i class="bi bi-arrow-clockwise"></i> Bring back the picture!</button>
+
+                
+                <p><b>Click</b> on the picture to change the image.</p>
+                <p><b>Double-click</b> on the image to remove it.</p>
+                <p><b>Mouse over</b> the image to display a caption.</p>
+            </div>
+
+            <div class="main-event hide" id="form-div">
+                <h2>Making Things Personal!</h2>
+                <form>
+                    <input type="text" placeholder="Name" aria-label="Name input" required>
+                    
+                    <h3>Choose a background color:</h3>
+                    <input type="radio" id="" name="" value=""><label for=""></label>
+                    <input type="radio" id="" name="" value=""><label for=""></label>
+                    <input type="radio" id="" name="" value=""><label for=""></label>
+                    <input type="radio" id="" name="" value=""><label for=""></label>
+
+                    <h3>Pick your favorite hobbies:</h3>
+                    <input type="checkbox" id="" name="" value=""><label for=""></label>
+                    <input type="checkbox" id="" name="" value=""><label for=""></label>
+                    <input type="checkbox" id="" name="" value=""><label for=""></label>
+                    <input type="checkbox" id="" name="" value=""><label for=""></label>
+                    <input type="checkbox" id="" name="" value=""><label for=""></label>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="scroll text-center">
+                <h3>Scroll to see more JavaScript at work</h3>
+                <i class="bi bi-arrow-down-circle"></i>
+            </div>
+        </div>
+    </main>
+
+    <!--JavaScript-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
