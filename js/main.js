@@ -56,34 +56,58 @@ function randomPicture(images) {
 
 //VARIABLES:
 let image = {};
-let imgDiv = document.querySelector('#onLoad-Picture');
-let captionDiv = document.querySelector('#caption-box')
-let hiddenBtn = document.querySelector('#hidden-btn');
+let imgDiv = document.getElementById('onLoad-Picture');
+let captionDiv = document.getElementById('caption-box')
+let hiddenBtn = document.getElementById('hidden-btn');
 
 let formDiv = document.querySelector('#form-div');
+let form = document.querySelector('#form-div form');
+let formNameInput = document.getElementById('user-name')
+let formOutputDiv = document.getElementById('form-output');
+let formRadioOptions = document.getElementsByClassName('radio-btn');
+
+let gameMenu = document.getElementById('game-menu');
+let pictureNavBtn = document.getElementById('navbtn-picture');
+let formNavBtn = document.getElementById('navbtn-form');
+
 
 console.log(image, imgDiv, captionDiv);
 
 //EVENT LISTENERS:
-//Load Event Listener - Adds <img> to HTML
+//  1. Load Event Listener - Adds <img> to HTML
 document.addEventListener('load', addImage(image));
 
-//Click Event Listener - Changes image
+//  2. Click Event Listener - Changes image
 imgDiv.addEventListener('click', console.log('Click Event fired'));
 
-//Dblclick Event Listener - Removes image, toggles reload button
+//  3. Dblclick Event Listener - Removes image, toggles reload button
 imgDiv.addEventListener('dblclick', console.log('Dblclick Event fired')); //removeImage
 
 //Click Event Listener - Adds <img> back to HTML (re-writes)
 hiddenBtn.addEventListener('click', addImage(image));
 
-//Mouseover/Mouseleave Event Listener - Caption displays only when mouseover <img>d
+//  4/5. Mouseover/Mouseleave Event Listener - Caption displays only when mouseover <img>d
 imgDiv.addEventListener('mouseover', console.log('Mouseover Event fired')); //toggleDisplay(caoptionDiv)
 imgDiv.addEventListener('mouseleave', console.log('Mouseleave Event fired')); //toggleDisplay(caoptionDiv)
 
-//Scroll Event Listener - Toggle form when scrolled (with timeout)
-//document.addEventListener('scroll', setTimeout(toggleDisplay(formDiv), 2000));
+//  6. Scroll Event Listener - Toggle form when scrolled (with timeout)
+document.addEventListener('scroll', setTimeout(toggleDisplay(formDiv), 2000));
 
+//  7. Input Event Listener - User's name is put in output message as typed
+formNameInput.addEventListener('input', addInput);
+
+//  8. Focusout Event Listener - Displays the output message when user focusout from input field
+formNameInput.addEventListener('focusout', toggleDisplay(formOutputDiv));
+
+//  9. Change Event Listener - Updates the background color as user makes change
+formRadioOptions.addEventListener("change", changeBackgroundColor);
+
+//  10. Submit Event Listener - Hides scroll message, hides form div, creates alert, displays new menu
+form.addEventListener('submit', handleSubmit);
+
+//Game Menu Click Events for Navigation
+pictureNavBtn.addEventListener('click', toggleDisplay(imgDiv));
+formNavBtn.addEventListener('click', toggleDisplay(formDiv));
 
 //FUNCTIONS:
 //Class toggle - show/hide
@@ -124,7 +148,30 @@ function removeImage() {
     toggleDisplay(hiddenBtn);
 }
 
+//Adds message to the #form-output div based on user input
+function addInput(e) {
+    let name = e.target.value;
+    formOutputDiv.innerHTML = `<h1>Hello ${name}!</h1> <br> <h2>I hope you like my form!</h2>`
+}
 
+function changeBackgroundColor(e) {
+    let color = e.target.value;
+    let body = document.querySelector('body');
 
+    body.style.backgroundcolor = color;
+}
 
+function handleSubmit(e) {
+    e.preventDefault();
 
+    //Hides scroll message
+    let scroll = document.getElementsByClassName('scroll');
+    toggleDisplay(scroll);
+
+    //Creates an alert
+    alert("Congratulations! You've now seen some awesome interactive JavaScript!");
+
+    //Hides form div; Displays new menu to toggle between games
+    toggleDisplay(formDiv);
+    toggleDisplay(gameMenu);
+}

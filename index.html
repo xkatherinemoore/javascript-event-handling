@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -31,12 +31,13 @@
                 <h2 class="text-center">JavaScript Event Types</h2>
                 <ol>
                     <li>Load</li>
-                    <li>Scroll</li>
                     <li>Click</li>
                     <li>Dblclick</li>
                     <li>Mouseover</li>
                     <li>Mouseleave</li>
+                    <li>Scroll</li>
                     <li>Input</li>
+                    <li>Focusout</li>
                     <li>Change</li>
                     <li>Submit</li>
                 </ol>
@@ -59,28 +60,27 @@
             <div class="main-event hide" id="form-div">
                 <h2>Making Things Personal!</h2>
                 <form>
-                    <input type="text" placeholder="Name" aria-label="Name input" required>
+                    <input type="text" placeholder="Name" id="user-name" aria-label="Name input" required>
                     
                     <h3>Choose a background color:</h3>
-                    <input type="radio" id="" name="" value=""><label for=""></label>
-                    <input type="radio" id="" name="" value=""><label for=""></label>
-                    <input type="radio" id="" name="" value=""><label for=""></label>
-                    <input type="radio" id="" name="" value=""><label for=""></label>
-
-                    <h3>Pick your favorite hobbies:</h3>
-                    <input type="checkbox" id="" name="" value=""><label for=""></label>
-                    <input type="checkbox" id="" name="" value=""><label for=""></label>
-                    <input type="checkbox" id="" name="" value=""><label for=""></label>
-                    <input type="checkbox" id="" name="" value=""><label for=""></label>
-                    <input type="checkbox" id="" name="" value=""><label for=""></label>
+                    <input type="radio" id="" name="" value="" class="radio-btn"><label for=""></label>
+                    <input type="radio" id="" name="" value="" class="radio-btn"><label for=""></label>
+                    <input type="radio" id="" name="" value="" class="radio-btn"><label for=""></label>
+                    <input type="radio" id="" name="" value="" class="radio-btn"><label for=""></label>
 
                     <button type="submit">Submit</button>
                 </form>
+                <div id="form-output" class="text-center hide"></div>
             </div>
 
             <div class="scroll text-center">
                 <h3>Scroll to see more JavaScript at work</h3>
                 <i class="bi bi-arrow-down-circle"></i>
+            </div>
+
+            <div class="main-event hide" id="game-menu">
+                <button id="navbtn-picture"><i class="bi bi-arrow-clockwise"></i> Reload Playing with Pictures</button>
+                <button id="navbtn-form"><i class="bi bi-arrow-clockwise"></i> Reload Making Things Personal</button>
             </div>
         </div>
     </main>
