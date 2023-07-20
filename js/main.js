@@ -64,7 +64,7 @@ let formDiv = document.querySelector('#form-div');
 let form = document.querySelector('#form-div form');
 let formNameInput = document.getElementById('user-name')
 let formOutputDiv = document.getElementById('form-output');
-let formRadioOptions = document.getElementsByClassName('radio-btn');
+let formBgOptions = document.getElementsById('bg-color-options');
 
 let gameMenu = document.getElementById('game-menu');
 let pictureNavBtn = document.getElementById('navbtn-picture');
@@ -100,7 +100,7 @@ formNameInput.addEventListener('input', addInput);
 formNameInput.addEventListener('focusout', toggleDisplay(formOutputDiv));
 
 //  9. Change Event Listener - Updates the background color as user makes change
-formRadioOptions.addEventListener("change", changeBackgroundColor);
+formBgOptions.addEventListener("change", changeBackgroundColor);
 
 //  10. Submit Event Listener - Hides scroll message, hides form div, creates alert, displays new menu
 form.addEventListener('submit', handleSubmit);

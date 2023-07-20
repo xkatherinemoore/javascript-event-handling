@@ -15,7 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -49,9 +50,10 @@
                 <div id="onLoad-Picture"></div>
 
                 <div id="caption-box" class="hide"></div>
-                <button id="hidden-btn" class="hide"><i class="bi bi-arrow-clockwise"></i> Bring back the picture!</button>
+                <button id="hidden-btn" class="hide"><i class="bi bi-arrow-clockwise"></i> Bring back the
+                    picture!</button>
 
-                
+
                 <p><b>Click</b> on the picture to change the image.</p>
                 <p><b>Double-click</b> on the image to remove it.</p>
                 <p><b>Mouse over</b> the image to display a caption.</p>
@@ -61,14 +63,20 @@
                 <h2>Making Things Personal!</h2>
                 <form>
                     <input type="text" placeholder="Name" id="user-name" aria-label="Name input" required>
-                    
-                    <h3>Choose a background color:</h3>
-                    <input type="radio" id="bg-white" name="bg-white" value="white" class="radio-btn"><label for="bg-white">White</label>
-                    <input type="radio" id="bg-gray" name="bg-gray" value="gray" class="radio-btn"><label for="bg-gray">Gray</label>
-                    <input type="radio" id="bg-gold" name="bg-gold" value="goldenrod" class="radio-btn"><label for="bg-gold">Gold</label>
-                    <input type="radio" id="bg-purp" name="bg-purp" value="darkorchid" class="radio-btn"><label for="bg-purp">Purple</label>
-                    <input type="radio" id="bg-grn" name="bg-grn" value="olivegreen" class="radio-btn"><label for="bg-grn">Olive Green</label>
 
+                    <h3>Choose a background color:</h3>
+                    <fieldset id="bg-color-options">
+                        <input type="radio" id="bg-white" name="bg-white" value="white" class="radio-btn"><label
+                            for="bg-white">White</label>
+                        <input type="radio" id="bg-gray" name="bg-gray" value="gray" class="radio-btn"><label
+                            for="bg-gray">Gray</label>
+                        <input type="radio" id="bg-gold" name="bg-gold" value="goldenrod" class="radio-btn"><label
+                            for="bg-gold">Gold</label>
+                        <input type="radio" id="bg-purp" name="bg-purp" value="darkorchid" class="radio-btn"><label
+                            for="bg-purp">Purple</label>
+                        <input type="radio" id="bg-grn" name="bg-grn" value="olivegreen" class="radio-btn"><label
+                            for="bg-grn">Olive Green</label>
+                    </fieldset>
                     <button type="submit">Submit</button>
                 </form>
                 <div id="form-output" class="text-center hide"></div>
