@@ -40,7 +40,7 @@ const images = [
     },
     {
         name: 'concert',
-        imgSrc: './images/stock-photo-yellow-concert-crowd.jpg',
+        imgSrc: './images/stock-photo-yellow-concert-crowd.png',
         alt: 'Crowded concert venue.',
         caption: 'Concerts are fun, but man I hate crowds.',
     },
@@ -91,7 +91,7 @@ imgDiv.addEventListener('mouseover', console.log('Mouseover Event fired')); //to
 imgDiv.addEventListener('mouseleave', console.log('Mouseleave Event fired')); //toggleDisplay(caoptionDiv)
 
 //  6. Scroll Event Listener - Toggle form when scrolled (with timeout)
-document.addEventListener('scroll', setTimeout(toggleDisplay(formDiv), 2000));
+//document.addEventListener('scroll', setTimeout(toggleDisplay(formDiv), 2000));
 
 //  7. Input Event Listener - User's name is put in output message as typed
 formNameInput.addEventListener('input', addInput);
