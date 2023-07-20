@@ -72,14 +72,14 @@ document.addEventListener('load', addImage(image));
 imgDiv.addEventListener('click', console.log('Click Event fired'));
 
 //Dblclick Event Listener - Removes image, toggles reload button
-imgDiv.addEventListener('dblclick', removeImage);
+imgDiv.addEventListener('dblclick', console.log('Dblclick Event fired')); //removeImage
 
 //Click Event Listener - Adds <img> back to HTML (re-writes)
 hiddenBtn.addEventListener('click', addImage(image));
 
 //Mouseover/Mouseleave Event Listener - Caption displays only when mouseover <img>d
-imgDiv.addEventListener('mouseover', toggleDisplay(captionDiv));
-imgDiv.addEventListener('mouseleave', toggleDisplay(captionDiv));
+imgDiv.addEventListener('mouseover', console.log('Mouseover Event fired')); //toggleDisplay(caoptionDiv)
+imgDiv.addEventListener('mouseleave', console.log('Mouseleave Event fired')); //toggleDisplay(caoptionDiv)
 
 //Scroll Event Listener - Toggle form when scrolled (with timeout)
 //document.addEventListener('scroll', setTimeout(toggleDisplay(formDiv), 2000));
